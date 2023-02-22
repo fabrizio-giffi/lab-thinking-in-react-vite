@@ -10,20 +10,23 @@ function SearchBar({ query, setQuery, check, setCheck }) {
   };
 
   return (
-    <>
-      <label>
-        Search
-        <input type="text" value={query} onChange={handleInput} />
-      </label>
-
-      <input
-        id="checkBox"
-        type="checkbox"
-        value={check}
-        onChange={handleCheck}
-      />
-      <label htmlFor="checkBox">Only show products in stock</label>
-    </>
+    <div className="searchBar">
+      <div>
+        <label>
+          Search
+          <input type="text" value={query} onChange={handleInput} />
+        </label>
+      </div>
+      <div>
+        <input
+          id="checkBox"
+          type="checkbox"
+          value={check}
+          onChange={handleCheck}
+        />
+        <label htmlFor="checkBox">Only show products in stock</label>
+      </div>
+    </div>
   );
 }
 
